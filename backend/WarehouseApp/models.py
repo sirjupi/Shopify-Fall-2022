@@ -6,7 +6,7 @@ from django.forms import CharField
 
 class Warehouse(models.Model):
     WarehouseID = models.AutoField(primary_key=True)
-    CityName = models.CharField(max_length=100)
+    City = models.CharField(max_length=100)
 
 class Inventory(models.Model):
     ItemID = models.AutoField(primary_key=True)
