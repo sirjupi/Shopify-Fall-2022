@@ -24,10 +24,7 @@ export class Navigation extends Component {
             >
               Inventory
             </NavLink>
-            <NavLink
-              className="d-inline p-2 bg-dark text-white"
-              to="/aboutme"
-            >
+            <NavLink className="d-inline p-2 bg-dark text-white" to="/aboutme">
               About Me
             </NavLink>
           </Nav>
