@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal, Button, Row, Col, Form, Image } from "react-bootstrap";
+import { Modal, Button, Row, Col, Form, ButtonToolbar } from "react-bootstrap";
 
 export class AddInventory extends Component {
   constructor(props) {
@@ -44,30 +44,6 @@ export class AddInventory extends Component {
       );
   }
 
-  // handleFileSelected(event){
-  //     event.preventDefault();
-  //     this.photofilename=event.target.files[0].name;
-  //     const formData = new FormData();
-  //     formData.append(
-  //         "myFile",
-  //         event.target.files[0],
-  //         event.target.files[0].name
-  //     );
-
-  //     fetch(process.env.REACT_APP_API+'Employee/SaveFile',{
-  //         method:'POST',
-  //         body:formData
-  //     })
-  //     .then(res=>res.json())
-  //     .then((result)=>{
-  //         this.imagesrc=process.env.REACT_APP_PHOTOPATH+result;
-  //     },
-  //     (error)=>{
-  //         alert('Failed');
-  //     })
-
-  // }
-
   render() {
     return (
       <div className="container">
@@ -97,18 +73,22 @@ export class AddInventory extends Component {
                   </Form.Group>
 
                   <Form.Group controlId="CityName">
-                    <Form.Label>Warehouse Location</Form.Label>
+                    <Form.Label>Assign to which warehouse?</Form.Label>
                     <Form.Control as="select">
-                      {this.state.whs.map((dep) => (
-                        <option key={dep.City}>{dep.City}</option>
+                      {this.state.whs.map((wh) => (
+                        <option key={wh.City + " (ID: " + wh.WarehouseID + ")"}>
+                          {wh.City + " (ID: " + wh.WarehouseID + ")"}
+                        </option>
                       ))}
                     </Form.Control>
                   </Form.Group>
-
+                  <br></br>
                   <Form.Group>
-                    <Button variant="primary" type="submit">
-                      Add Item to Inventory
-                    </Button>
+                    <ButtonToolbar>
+                      <Button className="button -blue center" type="submit">
+                        Add Item to Inventory
+                      </Button>
+                    </ButtonToolbar>
                   </Form.Group>
                 </Form>
               </Col>
@@ -121,9 +101,11 @@ export class AddInventory extends Component {
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="danger" onClick={this.props.onHide}>
-              Close
-            </Button>
+            <ButtonToolbar>
+              <Button variant="danger" onClick={this.props.onHide}>
+                Close
+              </Button>
+            </ButtonToolbar>
           </Modal.Footer>
         </Modal>
       </div>

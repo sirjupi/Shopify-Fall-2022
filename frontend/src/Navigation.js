@@ -1,35 +1,44 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap";
+import { Button, ButtonToolbar } from "react-bootstrap";
 
 export class Navigation extends Component {
   render() {
     return (
-      <Navbar bg="dark" expand="lg">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav>
-            <NavLink className="d-inline p-2 bg-dark text-white" to="/">
-              Home
-            </NavLink>
-            <NavLink
-              className="d-inline p-2 bg-dark text-white"
-              to="/warehouse"
-            >
-              Warehouse
-            </NavLink>
-            <NavLink
-              className="d-inline p-2 bg-dark text-white"
-              to="/inventory"
-            >
-              Inventory
-            </NavLink>
-            <NavLink className="d-inline p-2 bg-dark text-white" to="/aboutme">
-              About Me
-            </NavLink>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+      <div class="center1">
+        <svg xmlns="http://www.w3.org/2000/svg">
+          <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+            <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+          </filter>
+        </svg>
+
+        <span filter-content="S">Inventory Manager</span>
+        <Navbar>
+          <Navbar.Toggle />
+          <Navbar.Collapse>
+            <Nav>
+              <div className="wh">
+                <NavLink to="/warehouse">
+                  <ButtonToolbar>
+                    <Button className="button -flower center">
+                      Warehouses
+                    </Button>
+                  </ButtonToolbar>
+                </NavLink>
+              </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <div className="in">
+                <NavLink to="/inventory">
+                  <ButtonToolbar>
+                    <Button className="button -flower center">Inventory</Button>
+                  </ButtonToolbar>
+                </NavLink>
+              </div>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </div>
     );
   }
 }

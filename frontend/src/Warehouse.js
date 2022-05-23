@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Table } from "react-bootstrap";
-
 import { Button, ButtonToolbar } from "react-bootstrap";
 import { AddWHM } from "./AddWHM";
 import { EditWHM } from "./EditWHM";
@@ -47,8 +46,8 @@ export class Warehouse extends Component {
         <Table className="mt-4" striped bordered hover size="sm">
           <thead>
             <tr>
-              <th>WarehouseID</th>
-              <th>City</th>
+              <th>Warehouse ID</th>
+              <th>City Location</th>
               <th>Options</th>
             </tr>
           </thead>
@@ -60,7 +59,7 @@ export class Warehouse extends Component {
                 <td>
                   <ButtonToolbar>
                     <Button
-                      className="mr-2"
+                      className="button -dark center"
                       variant="info"
                       onClick={() =>
                         this.setState({
@@ -74,7 +73,7 @@ export class Warehouse extends Component {
                     </Button>
 
                     <Button
-                      className="mr-2"
+                      className="button -red center"
                       variant="danger"
                       onClick={() => this.DeleteWar(wh.WarehouseID)}
                     >
@@ -96,6 +95,7 @@ export class Warehouse extends Component {
 
         <ButtonToolbar>
           <Button
+            className="button -blue center"
             variant="primary"
             onClick={() => this.setState({ addModalShow: true })}
           >
