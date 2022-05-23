@@ -19,8 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "server": "cd.. && python manage.py runserver",
-    "startapp": "concurrently \"npm start\" \"npm run server\""
+    "server": "cd - && python manage.py runserver",
+    "startapp": "concurrently \"npm run server\""
   },
   "eslintConfig": {
     "extends": [
