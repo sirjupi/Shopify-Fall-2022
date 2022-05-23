@@ -1,3 +1,1 @@
-#Shopify-Fall-2022
-
-test
+This is my submission for the Shopify Intern Challenge for the Backend developer position.
