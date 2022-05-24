@@ -7,7 +7,7 @@ If you have the server running locally, then repl.it shows perfectly fine. Unfor
 
 Hope you guys can look past this hiccup, and check the code out since it all works ~ I just don't understand how to implement it on repl.it without starting from scratch
 
-![IDK](/Shopify-Fall-2022/idk.png)
+![IDK](/idk.png)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is my submission for the Shopify Intern Challenge for the Backend developer position.
