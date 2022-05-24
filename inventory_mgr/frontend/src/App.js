@@ -7,7 +7,7 @@ import { Inventory } from "./Inventory";
 import { Navigation } from "./Navigation";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Button, ButtonToolbar } from "react-bootstrap";
+import {  ButtonToolbar } from "react-bootstrap";
 
 function App() {
   return (
